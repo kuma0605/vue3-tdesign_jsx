@@ -57,6 +57,7 @@ export default {
       src: imgpre + 'captcha.jpg'
     };
   },
+  
   methods: {
     async login() {
       try {
