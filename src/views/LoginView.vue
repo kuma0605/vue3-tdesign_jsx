@@ -2,7 +2,7 @@
     <div
       class="relative w-full h-full login-screen adjust-full "
     >
-      <div class="absolute pt-8 w-full flex flex-col items-center text-3xl font-bold animate__animated animate__rubberBand">
+      <div class="absolute pt-8 w-full flex flex-col items-center text-3xl font-bold animate__animated animate__heartBeat">
         巡检系统
       </div>
       <div class="flex w-full h-full">
@@ -28,29 +28,7 @@
                   <lock-on-icon />
                 </template>
               </t-input>
-              <!-- <el-input
-                prefix-icon="Lock"
-                placeholder="请输入密码"
-                type="password"
-                v-model="password"
-                show-password
-                class="mb-4"
-                @focus="clearMsg"
-                @keyup.enter="login"
-              ></el-input>
-              <el-input
-                placeholder="验证码"
-                prefix-icon="Message"
-                v-model="captcha"
-                class="mb-4"
-                @focus="clearMsg"
-                  @keyup.enter="login"
-              >
-              </el-input>
-              <img class="mb-4" :src="src" @click="refreshCode" style="cursor:pointer"/>
-                
-              <el-button class="w-full" @click="login" type="primary"
-                >登录</el-button> -->
+              
               <t-button class="w-full" @click="login">登录</t-button>
             </div>
           </div>
