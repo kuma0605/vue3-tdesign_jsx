@@ -1,35 +1,19 @@
-# vue3-tdesign_jsx
+# 集成
+    [✅]pinia
+    [✅]unocss
+    [✅]tailwindcss
+    [✅]tdesign
+    [✅]axios请求封装
+    [✅]eslint
+    [✅]prettier
+    [✅]屏幕适配(rem)
 
-This template should help get you started developing with Vue 3 in Vite.
+## tdesign
+[tdesign](https://tdesign.tencent.com/vue-next/overview)
 
-## Recommended IDE Setup
+## pinia
+[pinia](https://pinia.vuejs.org/zh/introduction.html)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## tailwind
+[tailwind](https://www.tailwindcss.cn/)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
