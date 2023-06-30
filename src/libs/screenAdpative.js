@@ -6,6 +6,8 @@ function screenAdpative() {
   // 外接显示器的dpr好像始终是1
   // 笔记本的dpr是根据屏幕设置比来的，如果是125%，就是1.25
   let customFontSize = fontsize;
+  // dpr越大，ppi密度越大，字体越小
+  // https://cloud.tencent.com/developer/article/2280962
   // 当前字体乘以当前dpr，然后除以目标dpr，可以得到和目标dpr一样的字体
   if(dpr>1.25)customFontSize = customFontSize*dpr/1.25;
   
