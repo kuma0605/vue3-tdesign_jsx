@@ -1,8 +1,11 @@
 <template>
   <div class="relative w-full h-full login-screen adjust-full ">
-    <div class="absolute pt-8 w-full flex flex-col items-center text-3xl font-bold animate__animated animate__heartBeat">
-      巡检系统
+    <div class="absolute pt-8 w-full flex flex-col items-center">
+      <div class="text-3xl font-bold animate__animated animate__heartBeat">
+        巡检系统
+      </div>
     </div>
+    
     <div class="flex w-full h-full">
       <div class="flex-1"></div>
       <div class="flex-1 flex items-center justify-center">

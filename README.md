@@ -17,3 +17,8 @@
 ## tailwind
 [tailwind](https://www.tailwindcss.cn/)
 
+
+## 注意点
+### animated_css 
+    animated_css直接放根元素的子元素上，会影响布局，要放在子孙元素上
+
