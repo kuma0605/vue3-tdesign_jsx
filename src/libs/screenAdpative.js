@@ -10,7 +10,7 @@ function screenAdpative() {
   // 当前字体乘以当前dpr，然后除以目标dpr，可以得到和目标dpr一样的字体
   if(dpr>1.25)customFontSize = customFontSize*dpr/1.25;
   
-  if(customFontSize<10)customFontSize=10;
+  if(customFontSize<12)customFontSize=12;
   if(customFontSize>16)customFontSize=16;
   console.log(dpr, fontsize, customFontSize)
   document.documentElement.style.fontSize = customFontSize + 'px'
