@@ -7,8 +7,7 @@
     <div class="w-[60px] bg-[#111638] h-full shrink-0">
       <div class="flex justify-center items-center pt-4">
         <t-popup placement="right-top" destroy-on-close trigger="click" overlayClassName="!ml-3" overlayInnerClassName="animate__animated animate__bounceInLeft bg-white/95 p-0">
-          <t-icon class="cursor-pointer" name="user-circle" size="36px" style="color: white;"/>
-          <!-- <div slot="content">触发元素是指触发浮层内容显示的元素</div> -->
+          <t-icon class="cursor-pointer text-white" name="user-circle" size="36px" />
           <template #content>
             <div class="w-60">
               <div class="rounded-t-[6px] mb-4">
@@ -21,7 +20,7 @@
                 </div>
                 <div class="mt-[30px] border-b border-[#f8f8f8] pb-2">
                       <div class="text-center text-[#5e5873] font-medium text-lg">
-                        用户
+                        丁超
                       </div>
                       <div class="text-center text-[#b9b9c3] font-medium text-xs">
                         瀚天智能
