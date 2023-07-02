@@ -13,7 +13,7 @@ function screenAdpative() {
   
   if(customFontSize<12)customFontSize=12;
   if(customFontSize>16)customFontSize=16;
-  console.log(dpr, fontsize, customFontSize)
+  // console.log(dpr, fontsize, customFontSize)
   document.documentElement.style.fontSize = customFontSize + 'px'
 }
 

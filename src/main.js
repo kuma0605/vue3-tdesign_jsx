@@ -20,6 +20,8 @@ import '@unocss/reset/tailwind-compat.css'
 
 import 'animate.css';
 
+// import { manifest } from 'tdesign-icons-vue-next'
+
 import {getAxiosInstance} from './httpService'
 
 const app = createApp(App)
