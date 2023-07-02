@@ -22,3 +22,5 @@
 ### animated_css 
     animated_css直接放根元素的子元素上，会影响布局，要放在子孙元素上
 
+### 图标若不够用，可扩充iconfont图标
+
