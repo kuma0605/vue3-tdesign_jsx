@@ -31,3 +31,5 @@
     fontawesome示例：
     <font-awesome-icon :icon="['fas', 'cubes']" class="text-indigo-500 text-sm" />
 
+
+

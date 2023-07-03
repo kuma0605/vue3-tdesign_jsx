@@ -75,7 +75,7 @@
           </li>
           <li
             @click="toggleAppList"
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='app','!bg-zinc-300':leftTabChosen=='app','animate__animated animate__flipInX':leftTabChosen=='app'}">
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-300/36" :class="{'!text-[#746ced]':showAppList,'!bg-zinc-300':showAppList,'animate__animated animate__flipInX':showAppList}">
             <t-icon name="app" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">应用</div>
           </li>

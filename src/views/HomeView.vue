@@ -1,11 +1,11 @@
 <script setup lang="jsx">
-  import { SearchIcon, AddIcon } from 'tdesign-icons-vue-next';
+import { SearchIcon, AddIcon } from 'tdesign-icons-vue-next';
 
-  const renderPrefixIcon = () => <AddIcon />;
+const renderPrefixIcon = () => <AddIcon />;
 
-  function addCollect(){
+function addCollect() {
 
-  }
+}
 </script>
 
 <template>
@@ -20,7 +20,8 @@
           <font-awesome-icon :icon="['fas', 'star']" class="icon w-5 h-5 mr-6 cursor-pointer text-indigo-500" />
         </t-tooltip>
         <t-tooltip content="员工门户" placement="bottom" theme="primary">
-          <font-awesome-icon :icon="['fas', 'universal-access']" class="icon w-5 h-5 mr-6 cursor-pointer text-indigo-500" />
+          <font-awesome-icon :icon="['fas', 'universal-access']"
+            class="icon w-5 h-5 mr-6 cursor-pointer text-indigo-500" />
         </t-tooltip>
         <t-tooltip content="自定义工作台" placement="bottom-right" theme="primary">
           <font-awesome-icon :icon="['fas', 'sliders']" class="icon w-5 h-5 cursor-pointer text-indigo-500" />
@@ -50,7 +51,7 @@
         <div class="flex-1">
           <div class="rounded shadow bg-white p-4 mb-4">
             <div class="flex justify-between items-center">
-              <div >
+              <div>
                 <span class="font-medium mr-2">我的应用</span>
                 <font-awesome-icon :icon="['fas', 'cubes']" class="text-indigo-500 text-sm" />
               </div>
@@ -62,7 +63,7 @@
                 </t-input>
                 <t-space>
                   <!-- 图标按钮需要放在 t-space中，不然图标不显示 -->
-                  <t-button theme="primary" size="small" >
+                  <t-button theme="primary" size="small">
                     <template #icon>
                       <add-icon />
                     </template>
@@ -74,13 +75,11 @@
             <div class="py-4">
               <!-- 应用列表 -->
               <ul class="flex flex-wrap">
-                <li
-                  class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow">
+                <li class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow hover:animate-pulse">
                   <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-2xl" />
                   <div class="mt-4 text-base">设备台账</div>
                 </li>
-                <li
-                  class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow">
+                <li class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow hover:animate-pulse">
                   <font-awesome-icon :icon="['fas', 'hammer']" class="text-indigo-500 text-2xl" />
                   <div class="mt-4 text-base">设备维修</div>
                 </li>
@@ -98,7 +97,7 @@
               <span class="mr-2">暂无收藏</span><t-link theme="primary" underline size="small">添加</t-link>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
