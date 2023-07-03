@@ -55,19 +55,19 @@
         <ul>
           <li
             @click="chooseLeftTab('workbench')"
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36 " :class="{'!text-[#746ced]':leftTabChosen=='workbench','!bg-zinc-300':leftTabChosen=='workbench'}">
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36 " :class="{'!text-[#746ced]':leftTabChosen=='workbench','!bg-zinc-300':leftTabChosen=='workbench','animate__animated animate__flipInX':leftTabChosen=='workbench'}">
             <t-icon name="laptop" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">工作台</div>
           </li>
           <li
             @click="chooseLeftTab('todo')"
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='todo','!bg-zinc-300':leftTabChosen=='todo'}">
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='todo','!bg-zinc-300':leftTabChosen=='todo','animate__animated animate__flipInX':leftTabChosen=='todo'}">
             <t-icon name="root-list" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">待办</div>
           </li>
           <li
             @click="chooseLeftTab('app')"
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='app','!bg-zinc-300':leftTabChosen=='app'}">
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='app','!bg-zinc-300':leftTabChosen=='app','animate__animated animate__flipInX':leftTabChosen=='app'}">
             <t-icon name="app" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">应用</div>
           </li>
