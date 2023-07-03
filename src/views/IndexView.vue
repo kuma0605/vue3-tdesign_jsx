@@ -1,15 +1,20 @@
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
   const leftTabChosen = ref('workbench');
+  const showAppList = ref(false);
 
   function chooseLeftTab(tabChosen){
     leftTabChosen.value=tabChosen;
+  }
+
+  function toggleAppList(){
+    showAppList.value=!showAppList.value;
   }
 </script>
 
 <template>
   <div class="w-full h-full flex">
-    <div class="w-[60px] bg-[#111638] h-full shrink-0 flex flex-col justify-between">
+    <div class="w-[60px] bg-[#111638] h-full shrink-0 flex flex-col justify-between relative">
       <div>
         <div class="flex justify-center items-center pt-4 mb-8">
           <t-popup placement="right-top" destroy-on-close trigger="click" overlayClassName="!ml-3"
@@ -69,7 +74,7 @@
             <div class="mt-2 text-xs font-bold">待办</div>
           </li>
           <li
-            @click="chooseLeftTab('app')"
+            @click="toggleAppList"
             class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='app','!bg-zinc-300':leftTabChosen=='app','animate__animated animate__flipInX':leftTabChosen=='app'}">
             <t-icon name="app" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">应用</div>
@@ -93,6 +98,26 @@
           <t-tooltip content="系统设置" placement="right" theme="primary">
             <t-icon name="setting" size="24px" class="text-gray-200 cursor-pointer hover:text-white"></t-icon>
           </t-tooltip>
+        </div>
+      </div>
+      <div class="absolute w-[230px] h-full shadow left-[60px] top-0 bg-white z-[999] animate__animated animate__fadeInLeftBig p-4" v-show="showAppList">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-lg">我的应用</span>
+          <font-awesome-icon icon="xmark" class="text-lg cursor-pointer" @click="toggleAppList" />
+        </div>
+        <div>
+          <ul>
+            <li
+                  class="flex items-center cursor-pointer text-[#626262] py-2 p-3 rounded hover:bg-indigo-100">
+                  <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-base" />
+                  <div class="text-sm ml-2">设备台账</div>
+                </li>
+                <li
+                  class="flex items-center cursor-pointer text-[#626262] py-2 px-3 rounded hover:bg-indigo-100">
+                  <font-awesome-icon :icon="['fas', 'hammer']" class="text-indigo-500 text-base" />
+                  <div class="text-sm ml-2">设备维修</div>
+                </li>
+          </ul>
         </div>
       </div>
     </div>

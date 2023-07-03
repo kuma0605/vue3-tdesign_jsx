@@ -31,7 +31,20 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faListCheck,faListOl,faCircleArrowUp,faAt,faCubes,faHouseLaptop ,faStar,faUniversalAccess, faSliders, faLaptopFile} from '@fortawesome/free-solid-svg-icons'
+import {    
+    faListCheck,
+    faListOl,
+    faCircleArrowUp,
+    faAt,
+    faCubes,
+    faHouseLaptop,
+    faStar,
+    faUniversalAccess, 
+    faSliders, 
+    faLaptopFile,
+    faXmark,
+    faHammer
+} from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 // 按需加载，全部载入太大了
@@ -46,6 +59,8 @@ library.add(faStar)
 library.add(faUniversalAccess)
 library.add(faSliders)
 library.add(faLaptopFile)
+library.add(faXmark)
+library.add(faHammer)
 
 import {getAxiosInstance} from './httpService'
 

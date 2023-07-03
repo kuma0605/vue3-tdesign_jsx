@@ -2,6 +2,10 @@
   import { SearchIcon, AddIcon } from 'tdesign-icons-vue-next';
 
   const renderPrefixIcon = () => <AddIcon />;
+
+  function addCollect(){
+
+  }
 </script>
 
 <template>
@@ -75,6 +79,11 @@
                   <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-2xl" />
                   <div class="mt-4 text-base">设备台账</div>
                 </li>
+                <li
+                  class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow">
+                  <font-awesome-icon :icon="['fas', 'hammer']" class="text-indigo-500 text-2xl" />
+                  <div class="mt-4 text-base">设备维修</div>
+                </li>
               </ul>
             </div>
           </div>
@@ -82,7 +91,7 @@
             <div class="flex items-center">
               <span class="font-medium mr-2">我的收藏</span>
               <t-space>
-                <t-link size="small" theme="default" :prefix-icon="renderPrefixIcon" :on-click="clickLink">添加</t-link>
+                <t-link size="small" theme="default" :prefix-icon="renderPrefixIcon" :on-click="addCollect">添加</t-link>
               </t-space>
             </div>
             <div class="flex justify-center items-center text-3 py-4">
