@@ -76,7 +76,9 @@
       <div class="mb-2">
         <div class="p-2 flex justify-center">
           <t-tooltip content="系统消息" placement="right" theme="primary">
-            <t-icon name="notification-filled" size="24px" class="text-gray-200 cursor-pointer hover:text-white"></t-icon>
+            <t-badge count="5">
+              <t-icon name="notification-filled" size="24px" class="text-gray-200 cursor-pointer hover:text-white"></t-icon>
+            </t-badge>
           </t-tooltip>
         </div>
         <div class="p-2 flex justify-center">
