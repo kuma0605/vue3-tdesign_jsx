@@ -9,29 +9,19 @@
     [✅]animated.css
     [✅]屏幕适配(rem)
 # 相关文档链接
-    [vue3](https://cn.vuejs.org/guide/introduction.html)
+[vue3](https://cn.vuejs.org/guide/introduction.html)
 
-    [tdesign](https://tdesign.tencent.com/vue-next/overview) 
+[tdesign](https://tdesign.tencent.com/vue-next/overview) 
 
-    [unocss+tailwindcss](https://www.tailwindcss.cn/docs/installation) 
+[unocss+tailwindcss](https://www.tailwindcss.cn/docs/installation) 
 
-    [axios](https://axios-http.com/zh/docs/intro) 
+[axios](https://axios-http.com/zh/docs/intro) 
 
-    [vue-router](https://router.vuejs.org/zh/guide/) 
+[vue-router](https://router.vuejs.org/zh/guide/) 
 
-    [pinia](https://pinia.vuejs.org/zh/introduction.html) 
+[pinia](https://pinia.vuejs.org/zh/introduction.html) 
 
-    [animated_css](https://animate.style/)
-
-## tdesign
-[tdesign](https://tdesign.tencent.com/vue-next/overview)
-
-## pinia
-[pinia](https://pinia.vuejs.org/zh/introduction.html)
-
-## tailwind
-[tailwind](https://www.tailwindcss.cn/)
-
+[animated_css](https://animate.style/)
 
 ## 注意点
 ### animated_css 
