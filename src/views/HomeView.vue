@@ -62,7 +62,8 @@
                     <SearchIcon />
                   </template>
                 </t-input>
-                <t-space size="1.5rem">
+                <t-space>
+                  <!-- 图标按钮需要放在 t-space中，不然图标不显示 -->
                   <t-button theme="primary" size="small" >
                     <template #icon>
                       <add-icon />
