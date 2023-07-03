@@ -6,7 +6,22 @@
     [✅]axios请求封装
     [✅]eslint
     [✅]prettier
+    [✅]animated.css
     [✅]屏幕适配(rem)
+# 相关文档链接
+    [vue3](https://cn.vuejs.org/guide/introduction.html)
+
+    [tdesign](https://tdesign.tencent.com/vue-next/overview) 
+
+    [unocss+tailwindcss](https://www.tailwindcss.cn/docs/installation) 
+
+    [axios](https://axios-http.com/zh/docs/intro) 
+
+    [vue-router](https://router.vuejs.org/zh/guide/) 
+
+    [pinia](https://pinia.vuejs.org/zh/introduction.html) 
+
+    [animated_css](https://animate.style/)
 
 ## tdesign
 [tdesign](https://tdesign.tencent.com/vue-next/overview)

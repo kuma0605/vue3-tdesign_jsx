@@ -1,5 +1,10 @@
 <script setup>
+  import { ref, onMounted, onUnmounted } from 'vue'
+  const leftTabChosen = ref('workbench');
 
+  function chooseLeftTab(tabChosen){
+    leftTabChosen.value=tabChosen;
+  }
 </script>
 
 <template>
@@ -49,17 +54,20 @@
         </div>
         <ul>
           <li
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300 hover:text-[#746ced]">
+            @click="chooseLeftTab('workbench')"
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36 " :class="{'!text-[#746ced]':leftTabChosen=='workbench','!bg-zinc-300':leftTabChosen=='workbench'}">
             <t-icon name="laptop" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">工作台</div>
           </li>
           <li
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-200 hover:text-[#746ced]">
+            @click="chooseLeftTab('todo')"
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='todo','!bg-zinc-300':leftTabChosen=='todo'}">
             <t-icon name="root-list" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">待办</div>
           </li>
           <li
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-200 hover:text-[#746ced]">
+            @click="chooseLeftTab('app')"
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='app','!bg-zinc-300':leftTabChosen=='app'}">
             <t-icon name="app" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">应用</div>
           </li>
