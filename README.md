@@ -1,6 +1,5 @@
 # 集成
-[✅][vue3](https://cn.vuejs.org/guide/introduction.html)
-
+[✅][vue3](https://cn.vuejs.org/guide/introduction.html) 
 [✅][vue-router](https://router.vuejs.org/zh/guide/)
 
 [✅][pinia](https://pinia.vuejs.org/zh/introduction.html)
