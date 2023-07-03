@@ -109,12 +109,12 @@
           <ul>
             <li
                   class="flex items-center cursor-pointer text-[#626262] py-2 p-3 rounded hover:bg-indigo-100">
-                  <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-base" />
+                  <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-sm" />
                   <div class="text-sm ml-2">设备台账</div>
                 </li>
                 <li
                   class="flex items-center cursor-pointer text-[#626262] py-2 px-3 rounded hover:bg-indigo-100">
-                  <font-awesome-icon :icon="['fas', 'hammer']" class="text-indigo-500 text-base" />
+                  <font-awesome-icon :icon="['fas', 'hammer']" class="text-indigo-500 text-sm" />
                   <div class="text-sm ml-2">设备维修</div>
                 </li>
           </ul>
