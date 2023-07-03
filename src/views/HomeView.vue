@@ -6,26 +6,18 @@
   <main class="bg-gray-50 relative pt-[60px]">
     <div class="h-[60px] shadow bg-white w-full flex justify-between items-center px-6 absolute left-0 top-0">
       <div class="flex justify-center items-center">
-        <svg class="icon w-5 h-5" aria-hidden="true">
-          <use xlink:href="#icon-online-conference"></use>
-        </svg>
+        <font-awesome-icon :icon="['fas', 'house-laptop']" class="text-indigo-500 text-4" />
         <span class="text-font-color text-4 font-medium m-2">工作台</span>
       </div>
       <div class="flex justify-center items-center">
         <t-tooltip content="收藏夹" placement="bottom" theme="primary">
-          <svg class="icon w-5 h-5 mr-6 cursor-pointer" aria-hidden="true">
-            <use xlink:href="#icon-folder"></use>
-          </svg>
+          <font-awesome-icon :icon="['fas', 'star']" class="icon w-5 h-5 mr-6 cursor-pointer text-indigo-500" />
         </t-tooltip>
         <t-tooltip content="员工门户" placement="bottom" theme="primary">
-          <svg class="icon w-5 h-5 mr-6 cursor-pointer" aria-hidden="true">
-            <use xlink:href="#icon-group"></use>
-          </svg>
+          <font-awesome-icon :icon="['fas', 'universal-access']" class="icon w-5 h-5 mr-6 cursor-pointer text-indigo-500" />
         </t-tooltip>
         <t-tooltip content="自定义工作台" placement="bottom-right" theme="primary">
-          <svg class="icon w-5 h-5 cursor-pointer" aria-hidden="true">
-            <use xlink:href="#icon-draw"></use>
-          </svg>
+          <font-awesome-icon :icon="['fas', 'sliders']" class="icon w-5 h-5 cursor-pointer text-indigo-500" />
         </t-tooltip>
       </div>
     </div>

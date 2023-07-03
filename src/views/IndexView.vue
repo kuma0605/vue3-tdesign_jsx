@@ -63,7 +63,7 @@
             @click="chooseLeftTab('todo')"
             class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='todo','!bg-zinc-300':leftTabChosen=='todo','animate__animated animate__flipInX':leftTabChosen=='todo'}">
             <!-- t-badge 要会阻碍样式传递，要在其身上再加一层样式 -->
-            <t-badge count="5" class="text-white" :class="{'!text-[#746ced]':leftTabChosen=='todo'}">
+            <t-badge count="3" class="text-white" :class="{'!text-[#746ced]':leftTabChosen=='todo'}">
               <t-icon name="root-list" size="24px"></t-icon>
             </t-badge>
             <div class="mt-2 text-xs font-bold">待办</div>
