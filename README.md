@@ -21,6 +21,8 @@
 
 [✅]屏幕适配(rem)-以1920px宽度，字体16px为基准
 
+[✅](fontawesome)[https://fontawesome.com/search]
+
 ## 注意点
 ### animated_css 
     animated_css直接放根元素的子元素上，会影响布局，要放在子孙元素上

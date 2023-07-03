@@ -20,7 +20,22 @@ import '@unocss/reset/tailwind-compat.css'
 
 import 'animate.css';
 
-// import { manifest } from 'tdesign-icons-vue-next'
+// iconfont 生态桌面
+// https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=15591
+import '@/assets/colorful_desktop/iconfont.js';
+
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+
+/* add icons to the library */
+// 按需加载，全部载入太大了
+library.add(faUserSecret)
 
 import {getAxiosInstance} from './httpService'
 
@@ -33,5 +48,7 @@ app.use(TDesign);
 import { useCounterStore } from '@/stores/counter'
 const counter = useCounterStore()
 app.config.globalProperties.$axios = getAxiosInstance(counter)
+
+app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')

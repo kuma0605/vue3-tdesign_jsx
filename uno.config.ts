@@ -16,6 +16,7 @@ export default defineConfig({
   theme: {
       colors: {
           // ...
+          'font-color':'#626262'
       },
   },
   presets: [
