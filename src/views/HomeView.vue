@@ -1,5 +1,7 @@
-<script setup>
+<script setup lang="jsx">
   import { SearchIcon, AddIcon } from 'tdesign-icons-vue-next';
+
+  const renderPrefixIcon = () => <AddIcon />;
 </script>
 
 <template>
@@ -42,7 +44,7 @@
           </li>
         </ul>
         <div class="flex-1">
-          <div class="rounded shadow bg-white p-4 ">
+          <div class="rounded shadow bg-white p-4 mb-4">
             <div class="flex justify-between items-center">
               <div >
                 <span class="font-medium mr-2">我的应用</span>
@@ -65,10 +67,29 @@
                 </t-space>
               </div>
             </div>
-            <div class="flex flex-wrap">
-              
+            <div class="py-4">
+              <!-- 应用列表 -->
+              <ul class="flex flex-wrap">
+                <li
+                  class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow">
+                  <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-2xl" />
+                  <div class="mt-4 text-base">设备台账</div>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="rounded shadow bg-white p-4 ">
+            <div class="flex items-center">
+              <span class="font-medium mr-2">我的收藏</span>
+              <t-space>
+                <t-link size="small" theme="default" :prefix-icon="renderPrefixIcon" :on-click="clickLink">添加</t-link>
+              </t-space>
+            </div>
+            <div class="flex justify-center items-center text-3 py-4">
+              <span class="mr-2">暂无收藏</span><t-link theme="primary" underline size="small">添加</t-link>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
