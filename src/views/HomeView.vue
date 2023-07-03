@@ -7,7 +7,7 @@
     <div class="h-[60px] shadow bg-white w-full flex justify-between items-center px-6 absolute left-0 top-0">
       <div class="flex justify-center items-center">
         <font-awesome-icon :icon="['fas', 'house-laptop']" class="text-indigo-500 text-4" />
-        <span class="text-font-color text-4 font-medium m-2">工作台</span>
+        <span class="text-font-color text-4 font-bold m-2">工作台</span>
       </div>
       <div class="flex justify-center items-center">
         <t-tooltip content="收藏夹" placement="bottom" theme="primary">
@@ -45,7 +45,7 @@
           <div class="rounded shadow bg-white p-4 ">
             <div class="flex justify-between items-center">
               <div >
-                <span class="font-bold mr-2">我的应用</span>
+                <span class="font-medium mr-2">我的应用</span>
                 <font-awesome-icon :icon="['fas', 'cubes']" class="text-indigo-500 text-sm" />
               </div>
               <div class="flex justify-between items-center">
@@ -64,6 +64,9 @@
                   </t-button>
                 </t-space>
               </div>
+            </div>
+            <div class="flex flex-wrap">
+              
             </div>
           </div>
         </div>

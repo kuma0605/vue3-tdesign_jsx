@@ -27,5 +27,7 @@
 ### animated_css 
     animated_css直接放根元素的子元素上，会影响布局，要放在子孙元素上
 
-### 图标若不够用，可扩充iconfont图标
+### 图标采用tdesign自带图标，或者fontawesome图标
+    fontawesome示例：
+    <font-awesome-icon :icon="['fas', 'cubes']" class="text-indigo-500 text-sm" />
 
