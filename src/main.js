@@ -31,11 +31,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faListCheck,faListOl,faCircleArrowUp,faAt,faCubes } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 // 按需加载，全部载入太大了
-library.add(faUserSecret)
+
+library.add(faListOl)
+library.add(faCircleArrowUp)
+library.add(faListCheck)
+library.add(faAt)
+library.add(faCubes)
 
 import {getAxiosInstance} from './httpService'
 

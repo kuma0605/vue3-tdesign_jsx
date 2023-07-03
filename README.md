@@ -21,7 +21,7 @@
 
 [✅]屏幕适配(rem)-以1920px宽度，字体16px为基准
 
-[✅](fontawesome)[https://fontawesome.com/search]
+[✅](fontawesome)[https://fontawesome.com/search?o=r&m=free]
 
 ## 注意点
 ### animated_css 
