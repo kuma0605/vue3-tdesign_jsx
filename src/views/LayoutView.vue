@@ -50,7 +50,7 @@ function goTodoUrl(url) {
             <div v-if="currentApp == 'todo'" class="text-xs text-gray-default font-medium mb-2">
                 流程中心
             </div>
-            <ul class="pb-4 border-b border-[#f8f8f8]">
+            <ul class="pb-4 border-b border-[#f8f8f8] mb-2">
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 "
                     :class="{ 'bg-indigo-100': currentPath == 'mytodo' }" @click="goTodoUrl('/index/layout/todo/mytodo')">
                     <font-awesome-icon :icon="['fas', 'list-ol']" class="text-indigo-500 w-4 h-4" />
