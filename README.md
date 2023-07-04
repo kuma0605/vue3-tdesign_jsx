@@ -23,6 +23,8 @@
 
 [✅](fontawesome)[https://fontawesome.com/search?o=r&m=free]
 
+[✅](echarts)[https://echarts.apache.org/handbook/zh/basics/import/]
+
 ## 必备概念
 
 ### 应用
