@@ -9,7 +9,7 @@ function addCollect() {
 </script>
 
 <template>
-  <main class="bg-gray-50 relative pt-[60px]">
+  <main class="bg-zinc-100 relative pt-[60px]">
     <div class="h-[60px] shadow bg-white w-full flex justify-between items-center px-6 absolute left-0 top-0">
       <div class="flex justify-center items-center">
         <font-awesome-icon :icon="['fas', 'house-laptop']" class="text-indigo-500 text-4" />

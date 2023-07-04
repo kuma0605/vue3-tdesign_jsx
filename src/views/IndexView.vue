@@ -1,14 +1,27 @@
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
+  import { useRouter } from "vue-router"  // 引入userRouter
   const leftTabChosen = ref('workbench');
   const showAppList = ref(false);
+  const router = useRouter()
 
   function chooseLeftTab(tabChosen){
     leftTabChosen.value=tabChosen;
+
+    goRouter(tabChosen);
   }
 
   function toggleAppList(){
     showAppList.value=!showAppList.value;
+  }
+
+  function goRouter(tabChosen){
+    if(tabChosen==='todo'){
+      router.push("/index/" + 'layout/todo');
+    }
+    if(tabChosen==="workbench"){
+      router.push("/index");
+    }
   }
 </script>
 
