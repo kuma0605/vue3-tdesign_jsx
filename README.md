@@ -23,6 +23,17 @@
 
 [✅](fontawesome)[https://fontawesome.com/search?o=r&m=free]
 
+## 必备概念
+
+### 应用
+    易点巡检，分了不同应用模块。
+    照理说，不同应用模块就应该是不同的路由路径。
+    但是在易点巡检中，设备台账、设备维修 同一个子路由device下。
+    设备台账->设备列表：/device/AssetAccount
+    设备维修->维修工单：/device/DeviceRepair
+    所以在pinia中增加了currentApp，来区分当前选中的app。
+    但不建议不同app放在同一个子路由下，新项目建议用不同子路由来区分。
+
 ## 注意点
 ### css单位使用px，以1920px宽度设计稿为标准，字体16px为基准
     编译时会转化到rem
@@ -58,6 +69,7 @@ jquery场景：data: "menuId=" + menuId,要用qs.stringify({menuId})
     2.映射到不同路由，页面引入同一个子组件，包括左侧子导航、右侧子容器。
     第二种在路由结构上会比较直观。
     和后端同事沟通后，采用第一种，左侧子导航部分菜单是通用的。
+    思考再三还是采用第一种，路由会比较直观。
 
 
 

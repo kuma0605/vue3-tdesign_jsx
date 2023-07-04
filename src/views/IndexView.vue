@@ -15,7 +15,16 @@
     showAppList.value=!showAppList.value;
   }
 
+  import { useShareStore } from '@/stores/share'
+  const shares = useShareStore()
+
   function goRouter(tabChosen){
+    if(tabChosen==='workbench'){
+      shares.setApp(undefined)
+    }else{
+      shares.setApp(tabChosen)
+    }
+
     if(tabChosen==='todo'){
       router.push("/index/" + 'layout/todo/mytodo');
     }

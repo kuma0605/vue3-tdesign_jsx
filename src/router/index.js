@@ -36,7 +36,7 @@ const router = createRouter({
           name: "mainhome",
           component: () => import('../views/HomeView.vue'),
         },
-        {
+        /* {
           path: "layout/:whichApp",
           name: "layout",
           component: () => import('@/views/LayoutView.vue'),
@@ -48,6 +48,37 @@ const router = createRouter({
             {
               path: "mystart",
               component: () => import('@/views/todo/mystart.vue'),
+            }
+          ]
+        } */
+        {
+          path: "layout",
+          name: "layout",
+          component: () => import('@/views/LayoutView.vue'),
+          children: [
+            {
+              path: "todo",
+              component: () => import('../components/CommonView.vue'),
+              children:[
+                {
+                  path: "mytodo",
+                  component: () => import('@/views/todo/mytodo.vue'),
+                },
+                {
+                  path: "mystart",
+                  component: () => import('@/views/todo/mystart.vue'),
+                }
+              ]
+            },
+            {
+              path: "devicerecord",
+              component: () => import('../components/CommonView.vue'),
+              children:[
+                {
+                  path: "dashboard",
+                  component: () => import('@/views/deviceRecord/dashboard.vue'),
+                },
+              ]
             }
           ]
         }

@@ -1,10 +1,30 @@
 <script setup lang="jsx">
 import { SearchIcon, AddIcon } from 'tdesign-icons-vue-next';
-
+import { useRouter } from "vue-router"  // 引入userRouter
+const router = useRouter()
 const renderPrefixIcon = () => <AddIcon />;
+
+import { useShareStore } from '@/stores/share'
+const shares = useShareStore()
 
 function addCollect() {
 
+}
+
+function goApp(appChosen) {
+  // console.log(appChosen)
+  shares.setApp(appChosen)
+  let targetUrl;
+  if(appChosen=='devicerecord'){
+    targetUrl= "/index/layout/devicerecord/dashboard"
+  }
+  // console.log(targetUrl)
+  router.push(targetUrl);
+}
+
+function goTodoUrl(url) {
+  shares.setApp("todo")
+  router.push(url)
 }
 </script>
 
@@ -31,11 +51,13 @@ function addCollect() {
     <div class="p-6 ">
       <div class="flex">
         <ul class="rounded shadow bg-white p-4 w-[280px] shrink-0 mr-6">
-          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 ">
+          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 "
+            @click="goTodoUrl('/index/layout/todo/mytodo')">
             <font-awesome-icon :icon="['fas', 'list-ol']" class="text-indigo-500 w-4 h-4" />
             <span class="ml-2">我的待办</span>
           </li>
-          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 ">
+          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 "
+            @click="goTodoUrl('/index/layout/todo/mystart')">
             <font-awesome-icon :icon="['fas', 'circle-arrow-up']" class="text-indigo-500 w-4 h-4" />
             <span class="ml-2">我发起的</span>
           </li>
@@ -75,11 +97,14 @@ function addCollect() {
             <div class="py-4">
               <!-- 应用列表 -->
               <ul class="flex flex-wrap">
-                <li class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow hover:animate-pulse">
+                <li
+                  @click="goApp('devicerecord')"
+                  class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow hover:animate-pulse">
                   <font-awesome-icon :icon="['fas', 'laptop-file']" class="text-indigo-500 text-2xl" />
                   <div class="mt-4 text-base">设备台账</div>
                 </li>
-                <li class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow hover:animate-pulse">
+                <li
+                  class="flex flex-col items-center cursor-pointer text-[#626262] p-6 rounded hover:shadow hover:animate-pulse">
                   <font-awesome-icon :icon="['fas', 'hammer']" class="text-indigo-500 text-2xl" />
                   <div class="mt-4 text-base">设备维修</div>
                 </li>
@@ -99,5 +124,4 @@ function addCollect() {
         </div>
       </div>
     </div>
-  </main>
-</template>
+</main></template>

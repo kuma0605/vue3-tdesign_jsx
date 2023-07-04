@@ -47,7 +47,8 @@ import {
     faRectangleList,
     faCircleCheck,
     faUserCheck,
-    faCalendarDays
+    faCalendarDays,
+    faHouse
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
@@ -69,6 +70,7 @@ library.add(faRectangleList)
 library.add(faCircleCheck)
 library.add(faUserCheck)
 library.add(faCalendarDays)
+library.add(faHouse)
 
 import {getAxiosInstance} from './httpService'
 
@@ -79,7 +81,11 @@ app.use(router)
 app.use(TDesign);
 
 import { useCounterStore } from '@/stores/counter'
+import { useShareStore } from "@/stores/share"
 const counter = useCounterStore()
+const shares = useShareStore();
+let currentApp = window.localStorage.getItem('currentApp');
+if(currentApp)shares.setApp(currentApp);
 app.config.globalProperties.$axios = getAxiosInstance(counter)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
