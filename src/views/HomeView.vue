@@ -56,12 +56,12 @@ function addCollect() {
                 <font-awesome-icon :icon="['fas', 'cubes']" class="text-indigo-500 text-sm" />
               </div>
               <div class="flex justify-between items-center">
-                <t-input default-value="" size="small" placeholder="输入名称来搜索" class="mr-2">
-                  <template #prefix-icon>
-                    <SearchIcon />
-                  </template>
-                </t-input>
                 <t-space>
+                  <t-input default-value="" size="small" placeholder="输入名称来搜索">
+                    <template #prefix-icon>
+                      <SearchIcon />
+                    </template>
+                  </t-input>
                   <!-- 图标按钮需要放在 t-space中，不然图标不显示 -->
                   <t-button theme="primary" size="small">
                     <template #icon>
@@ -89,9 +89,7 @@ function addCollect() {
           <div class="rounded shadow bg-white p-4 ">
             <div class="flex items-center">
               <span class="font-medium mr-2">我的收藏</span>
-              <t-space>
-                <t-link size="small" theme="default" :prefix-icon="renderPrefixIcon" :on-click="addCollect">添加</t-link>
-              </t-space>
+              <t-link size="small" theme="default" :prefix-icon="renderPrefixIcon" :on-click="addCollect">添加</t-link>
             </div>
             <div class="flex justify-center items-center text-3 py-4">
               <span class="mr-2">暂无收藏</span><t-link theme="primary" underline size="small">添加</t-link>

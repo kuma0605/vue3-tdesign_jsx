@@ -129,31 +129,9 @@ function showDrawer(){
   drawerVisible.value = true;
 }
 
-const tagList = ref([]);
-
-function drawerConfirm(){
-  drawerVisible.value = false;
-  tagList.value=[
-    {
-      key:"name",
-      value:"丁超"
-    },
-    {
-      key:"code",
-      value:"123456789"
-    }
-  ]
-  
-}
-
-const removeTag = (index) => {
-  console.log(index);
-  tagList.value.splice(index, 1);
-};
-
 </script>
 <template>
-  <div class="bg-white rounded shadow p-2 ">
+  <div class="bg-white rounded shadow p-2 overflow-y-auto">
     <div class="flex justify-end  mb-2">
       <div class="flex items-center">
         <t-space size="8px">
@@ -169,36 +147,12 @@ const removeTag = (index) => {
       </div>
     </div>
     <div class="flex justify-between items-center bg-[#f9f9f9] px-3 py-2 ">
-      <div>
-        <t-space class="tag-block light">
-          <t-tag
-            v-for="(tag, index) in tagList"
-            :key="index"
-            :closable="true"
-            @close="removeTag(index)"
-          >
-            {{ tag.value }}
-          </t-tag>
-        </t-space>
-      </div>
+      <div></div>
       <t-link theme="primary" underline @click="showDrawer">高级搜索</t-link>
-      <t-drawer v-model:visible="drawerVisible" header="高级搜索" size="medium" @confirm="drawerConfirm" >
+      <t-drawer v-model:visible="drawerVisible" header="高级搜索" size="medium">
         <t-form>
-          <t-form-item label="申请编号" name="code" >
+          <t-form-item label="申请编号" name="name" >
             <t-input placeholder="请输入内容" />
-          </t-form-item>
-          <t-form-item label="申请人" name="name" >
-            <t-input placeholder="请输入内容" />
-          </t-form-item>
-          <t-form-item label="公司" name="company" >
-            <t-select v-model="value2" placeholder="请选择类型" clearable >
-              <t-option v-for="item in options2" :key="item.value" :value="item.value" :label="item.label"></t-option>
-            </t-select>
-          </t-form-item>
-          <t-form-item label="部门" name="company" >
-            <t-select v-model="value2" placeholder="请选择类型" clearable >
-              <t-option v-for="item in options2" :key="item.value" :value="item.value" :label="item.label"></t-option>
-            </t-select>
           </t-form-item>
         </t-form>
       </t-drawer>

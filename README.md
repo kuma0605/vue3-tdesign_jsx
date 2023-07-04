@@ -53,7 +53,6 @@ https://www.cnblogs.com/tseaki/p/13685665.html
 方式一：qs.stringify
 方式二：new FormData
 jquery场景：data: "menuId=" + menuId,要用qs.stringify({menuId})
-
 ### 左侧待办2种思路对应右侧两种思路
     1.映射到同一个路由，传递不同参数，获取左侧子导航，再手动路由到右侧子容器
     2.映射到不同路由，页面引入同一个子组件，包括左侧子导航、右侧子容器。

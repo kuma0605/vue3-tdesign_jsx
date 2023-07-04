@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 </script>
 <template>
     <div class="flex ">
-        <div class="w-[230px] shrink-0 bg-white shadow px-4 py-3 h-full">
+        <div class="w-[230px] shrink-0 bg-white shadow px-4 py-3 h-full overflow-y-auto">
             <div class="text-lg text-font-color mb-4">
                 {{ titleMap[whichApp] }}
             </div>
