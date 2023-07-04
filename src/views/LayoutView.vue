@@ -75,7 +75,7 @@ function goTodoUrl(url) {
                 </li>
                 <template v-if="currentApp != 'todo'">
                     <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 "
-                        :class="{ 'bg-indigo-100': currentPath == 'mytodo' }">
+                        :class="{ 'bg-indigo-100': currentPath == 'todolist' }">
                         <font-awesome-icon :icon="['fas', 'rectangle-list']" class="text-indigo-500 w-4 h-4" />
                         <span class="ml-2">待处理工单</span>
                     </li>
