@@ -42,8 +42,12 @@ const router = createRouter({
           component: () => import('@/views/LayoutView.vue'),
           children: [
             {
-              path: "todo",
+              path: "mytodo",
               component: () => import('@/views/todo/mytodo.vue'),
+            },
+            {
+              path: "mystart",
+              component: () => import('@/views/todo/mystart.vue'),
             }
           ]
         }

@@ -17,7 +17,7 @@
 
   function goRouter(tabChosen){
     if(tabChosen==='todo'){
-      router.push("/index/" + 'layout/todo');
+      router.push("/index/" + 'layout/todo/mytodo');
     }
     if(tabChosen==="workbench"){
       router.push("/index");
@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <div class="w-full h-full flex">
+  <div class="flex">
     <div class="w-[60px] bg-[#111638] h-full shrink-0 flex flex-col justify-between relative">
       <div>
         <div class="flex justify-center items-center pt-4 mb-8">

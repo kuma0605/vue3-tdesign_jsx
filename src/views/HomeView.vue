@@ -31,19 +31,19 @@ function addCollect() {
     <div class="p-6 ">
       <div class="flex">
         <ul class="rounded shadow bg-white p-4 w-[280px] shrink-0 mr-6">
-          <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 ">
             <font-awesome-icon :icon="['fas', 'list-ol']" class="text-indigo-500 w-4 h-4" />
             <span class="ml-2">我的待办</span>
           </li>
-          <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 ">
             <font-awesome-icon :icon="['fas', 'circle-arrow-up']" class="text-indigo-500 w-4 h-4" />
             <span class="ml-2">我发起的</span>
           </li>
-          <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 ">
             <font-awesome-icon icon="fa-solid fa-list-check" class="text-indigo-500 w-4 h-4" />
             <span class="ml-2">我处理的</span>
           </li>
-          <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+          <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 ">
             <font-awesome-icon :icon="['fas', 'at']" class="text-indigo-500 w-4 h-4" />
             <span class="ml-2">抄送我的</span>
           </li>
