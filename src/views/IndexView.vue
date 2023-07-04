@@ -1,5 +1,5 @@
 <script setup>
-  import { ref, onMounted, onUnmounted } from 'vue'
+  import { ref, onMounted, onUnmounted,computed } from 'vue'
   import { useRouter, useRoute} from "vue-router"  // 引入userRouter
   const leftTabChosen = ref('workbench');
   const showAppList = ref(false);
@@ -43,6 +43,14 @@
   setTimeout(()=>{
     matchRoute()
   },0)
+
+  const validTabChosen = computed(() => {
+    if(shares.currentApp!=undefined){
+      return shares.currentApp;
+    }
+    
+    return leftTabChosen.value;
+  })
   
 </script>
 
@@ -94,15 +102,15 @@
         <ul>
           <li
             @click="chooseLeftTab('workbench')"
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36 " :class="{'!text-[#746ced]':leftTabChosen=='workbench','!bg-zinc-300':leftTabChosen=='workbench','animate__animated animate__flipInX':leftTabChosen=='workbench'}">
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36 " :class="{'!text-[#746ced]':validTabChosen=='workbench','!bg-zinc-300':validTabChosen=='workbench','animate__animated animate__flipInX':validTabChosen=='workbench'}">
             <t-icon name="laptop" size="24px"></t-icon>
             <div class="mt-2 text-xs font-bold">工作台</div>
           </li>
           <li
             @click="chooseLeftTab('todo')"
-            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36" :class="{'!text-[#746ced]':leftTabChosen=='todo','!bg-zinc-300':leftTabChosen=='todo','animate__animated animate__flipInX':leftTabChosen=='todo'}">
+            class="flex flex-col items-center cursor-pointer text-white p-2 rounded mb-2 hover:bg-zinc-300/36" :class="{'!text-[#746ced]':validTabChosen=='todo','!bg-zinc-300':validTabChosen=='todo','animate__animated animate__flipInX':validTabChosen=='todo'}">
             <!-- t-badge 要会阻碍样式传递，要在其身上再加一层样式 -->
-            <t-badge count="3" class="text-white" :class="{'!text-[#746ced]':leftTabChosen=='todo'}">
+            <t-badge count="3" class="text-white" :class="{'!text-[#746ced]':validTabChosen=='todo'}">
               <t-icon name="root-list" size="24px"></t-icon>
             </t-badge>
             <div class="mt-2 text-xs font-bold">待办</div>
