@@ -8,24 +8,56 @@ import { ref, onMounted, onUnmounted } from 'vue'
             <div class="text-lg text-font-color mb-4">
                 {{ titleMap[whichApp] }}
             </div>
-            <ul class="">
+            <div v-if="whichApp=='todo'" class="text-xs text-gray-default font-medium mb-2">
+                流程中心
+            </div>
+            <ul class="mb-4">
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
-                    <font-awesome-icon :icon="['fas', 'list-ol']" class="text-indigo-500" />
+                    <font-awesome-icon :icon="['fas', 'list-ol']" class="text-indigo-500 w-4 h-4" />
                     <span class="ml-2">我的待办</span>
                 </li>
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
-                    <font-awesome-icon :icon="['fas', 'circle-arrow-up']" class="text-indigo-500" />
+                    <font-awesome-icon :icon="['fas', 'circle-arrow-up']" class="text-indigo-500 w-4 h-4" />
                     <span class="ml-2">我发起的</span>
                 </li>
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
-                    <font-awesome-icon icon="fa-solid fa-list-check" class="text-indigo-500" />
+                    <font-awesome-icon icon="fa-solid fa-list-check" class="text-indigo-500 w-4 h-4" />
                     <span class="ml-2">我处理的</span>
                 </li>
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
-                    <font-awesome-icon :icon="['fas', 'at']" class="text-indigo-500" />
+                    <font-awesome-icon :icon="['fas', 'at']" class="text-indigo-500 w-4 h-4" />
                     <span class="ml-2">抄送我的</span>
                 </li>
+                <template v-if="whichApp!='todo'">
+                    <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+                        <font-awesome-icon :icon="['fas','rectangle-list']" class="text-indigo-500 w-4 h-4" />
+                        <span class="ml-2">待处理工单</span>
+                    </li>
+                </template>
             </ul>
+            <template v-if="whichApp=='todo'">
+                <div class="text-xs text-gray-default font-medium mb-2">
+                    其他待办
+                </div>
+                <ul >
+                    <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+                        <font-awesome-icon :icon="['fas','rectangle-list']" class="text-indigo-500 w-4 h-4" />
+                        <span class="ml-2">待处理工单</span>
+                    </li>
+                    <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+                        <font-awesome-icon :icon="['fas', 'circle-check']" class="text-indigo-500 w-4 h-4" />
+                        <span class="ml-2">待确认调拨单</span>
+                    </li>
+                    <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+                        <font-awesome-icon icon="fa-solid fa-user-check" class="text-indigo-500 w-4 h-4" />
+                        <span class="ml-2">待处理员工申请</span>
+                    </li>
+                    <li class="flex items-center text-sm p-2 rounded cursor-pointer hover:bg-indigo-100 ">
+                        <font-awesome-icon :icon="['fas', 'calendar-days']" class="text-indigo-500 w-4 h-4" />
+                        <span class="ml-2">日程</span>
+                    </li>
+                </ul>
+            </template>
         </div>
         <div class="bg-zinc-100 flex-1 overflow-y-auto p-4">
             <RouterView class="w-full h-full" />

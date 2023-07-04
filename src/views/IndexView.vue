@@ -115,8 +115,8 @@
       </div>
       <div class="absolute w-[230px] h-full shadow left-[60px] top-0 bg-white z-[999] animate__animated animate__fadeInLeftBig p-4" v-show="showAppList">
         <div class="flex items-center justify-between mb-4">
-          <span class="text-lg">我的应用</span>
-          <font-awesome-icon icon="xmark" class="text-lg cursor-pointer" @click="toggleAppList" />
+          <span class="text-lg text-font-color">我的应用</span>
+          <font-awesome-icon icon="xmark" class="text-lg cursor-pointer text-font-color" @click="toggleAppList" />
         </div>
         <div>
           <ul>

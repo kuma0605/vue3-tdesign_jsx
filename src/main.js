@@ -43,7 +43,11 @@ import {
     faSliders, 
     faLaptopFile,
     faXmark,
-    faHammer
+    faHammer,
+    faRectangleList,
+    faCircleCheck,
+    faUserCheck,
+    faCalendarDays
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
@@ -61,6 +65,10 @@ library.add(faSliders)
 library.add(faLaptopFile)
 library.add(faXmark)
 library.add(faHammer)
+library.add(faRectangleList)
+library.add(faCircleCheck)
+library.add(faUserCheck)
+library.add(faCalendarDays)
 
 import {getAxiosInstance} from './httpService'
 
