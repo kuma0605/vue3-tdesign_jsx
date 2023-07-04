@@ -1,9 +1,10 @@
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
-  import { useRouter } from "vue-router"  // 引入userRouter
+  import { useRouter, useRoute} from "vue-router"  // 引入userRouter
   const leftTabChosen = ref('workbench');
   const showAppList = ref(false);
   const router = useRouter()
+  const route = useRoute()
 
   function chooseLeftTab(tabChosen){
     leftTabChosen.value=tabChosen;
@@ -32,6 +33,17 @@
       router.push("/index");
     }
   }
+
+  function matchRoute() {
+    if(route.fullPath!='/index'){
+      leftTabChosen.value='todo'
+    }
+  }
+
+  setTimeout(()=>{
+    matchRoute()
+  },0)
+  
 </script>
 
 <template>

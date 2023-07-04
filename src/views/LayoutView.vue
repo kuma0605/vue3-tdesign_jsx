@@ -62,13 +62,13 @@ function goTodoUrl(url) {
                     <span class="ml-2">我发起的</span>
                 </li>
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 "
-                    :class="{ 'bg-indigo-100': currentPath == 'mytodo' }"
+                    :class="{ 'bg-indigo-100': currentPath == 'myhandle' }"
                     >
                     <font-awesome-icon icon="fa-solid fa-list-check" class="text-indigo-500 w-4 h-4" />
                     <span class="ml-2">我处理的</span>
                 </li>
                 <li class="flex items-center text-sm p-2 rounded cursor-pointer my-1 hover:bg-indigo-100 "
-                    :class="{ 'bg-indigo-100': currentPath == 'mytodo' }"
+                    :class="{ 'bg-indigo-100': currentPath == 'sendtome' }"
                     >
                     <font-awesome-icon :icon="['fas', 'at']" class="text-indigo-500 w-4 h-4" />
                     <span class="ml-2">抄送我的</span>
